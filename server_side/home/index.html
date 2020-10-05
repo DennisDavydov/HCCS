@@ -17,28 +17,12 @@ $sql = "SELECT request_temp FROM sensor_data";
 $temperatures = mysqli_fetch_row($result);
 		}
 </script>
-<script>
-    function startTime() {
-      var today = new Date();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTime(m);
-      s = checkTime(s);
-      document.getElementById('txt').innerHTML =
-      h + ":" + m + ":" + s;
-      var t = setTimeout(startTime, 500);
-    }
-    function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-    }
-    </script>
+<script defer src="includes/script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
     
-<body onload="startTime()">
+<body>
 
     <div class ="box" id="txt"></div> 
 
@@ -54,7 +38,7 @@ $temperatures = mysqli_fetch_row($result);
         Гостинная &#8451: <input type="number" name="tempI" min = "0" max="100" step="0.5"
              value = "<?php echo htmlspecialchars($temperatures[0]);?>" />
    
-        <div class="child"><?php echo ($temp[0])/> &#8451
+        <div class="child" id = "Gost"><?php echo ($temp[0])/> &#8451
         </div>    
         </div>
        
