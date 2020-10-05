@@ -1,0 +1,131 @@
+body {
+  background-image: url("background.png");
+  background-size: cover;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-weight: 200;}
+
+  h1 {
+    color: black;
+    text-shadow:  0 0 5px white, 0 0 7px darkturquoise;
+  }
+
+#txt {
+  font-size: large;
+  color: black;
+}
+
+header {float: left;}
+
+
+div {
+text-align: center;
+}
+
+h1 {text-align: center;
+
+}
+
+
+
+button
+{size: auto;
+  background-color: rgba(77, 170, 0, 0.671);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  top:5px;
+
+}
+button :hover {color: rgb(6, 196, 6);}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.parent {
+  float: right;
+  
+
+}
+
+.child {
+  background-color: white;
+  float: right;
+  width:auto;
+  border: 2px solid black;
+ padding: 10px;
+position: relative;
+top: 1px;
+right: 1px;
+color:black;
+}
+
+#curtemp {float: right;
+  margin:10px;
+  padding: 10px;
+  background-image: linear-gradient(to right,rgba(0, 178, 223, 0.9),rgba(3, 82, 172, 0.9),rgba(0, 255, 55, 0.9), rgba(255, 0, 0, 0.9));
+  color:white;
+  font-size: 15px;
+  border-radius: 15px 50px 30px;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+
+input[type=number], select {
+  width: 10%;
+  padding: 10px 32px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  -moz-appearance: textfield;
+  font-size: large;
+}
+
+input[type=submit] {
+  width: 60px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: #cac3c3af;
+  padding: 20px;
+}
+
+.Room {
+  margin:10px;
+  border: 2px solid black;
+  background: linear-gradient(to right,rgb(116, 79, 38,0.5),rgb(0, 189, 223,0.5));
+  border-radius: 15px 5px 5px 50px;
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+hr {
+  color: black;
+  
+}

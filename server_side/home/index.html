@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sysmä Батареи</title>
+    <link rel="stylesheet" type="text/css" href="includes/style.css">
+    <script language ="php">
+
+include_once 'includes/dbh.inc.php';
+
+$sql = "SELECT request_temp FROM sensor_data";
+
+	$result = mysqli_query($conn, $sql);
+	$resultCheck = mysqli_num_rows($result);
+	if ($resultCheck > 0) {
+$temperatures = mysqli_fetch_row($result);
+		}
+</script>
+<script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+    
+<body onload="startTime()">
+
+    <div class ="box" id="txt"></div> 
+
+    <hr>
+
+    <h1> Пожалуйста, введите температуру &#8451</h1>
+    <hr>
+    <div class="box">
+        <div id ="curtemp">Температура на данный момент: </div> <br><br><br>
+    <form action="includes/submit_temps.inc.php" method="post">
+
+        <div class="Room">
+        Гостинная &#8451: <input type="number" name="tempI" min = "0" max="100" step="0.5"
+             value = "<?php echo htmlspecialchars($temperatures[0]);?>" />
+   
+        <div class="child"><?php echo ($temp[0])/> &#8451
+        </div>    
+        </div>
+       
+        <div class="Room">
+            Гостинная &#8451: <input type="number" name="tempI" min = "0" max="100" step="0.5"
+                 value = "<?php echo htmlspecialchars($temperatures[0]);?>" />
+           
+            <div class="child"><?php echo ($temp[0])/> &#8451
+            </div>    
+            </div>
+          
+            <div class="Room">
+                Гостинная &#8451: <input type="number" name="tempI" min = "0" max="100" step="0.5"
+                     value = "<?php echo htmlspecialchars($temperatures[0]);?>" />
+             
+                <div class="child"><?php echo ($temp[0])/> &#8451
+                </div>    
+                </div>
+               
+                <div class="Room">
+                    Гостинная &#8451: <input type="number" name="tempI" min = "0" max="100" step="0.5"
+                         value = "<?php echo htmlspecialchars($temperatures[0]);?>" />
+                 
+                    <div class="child"> <?php echo ($temp[0])/> &#8451
+                    </div>    
+                    </div>
+                    <button type="submit" name="submit">Сохранить</button>  
+                </div>
+        
+                
+        <br>
+      
+         
+        
+    </form>
+    </div>
+
+    <footer>
+        <div id="box">
+        <hr>
+        <i class="fas fa-cloud"></i> <br>
+        Davydov &copy;
+    </footer>
+</div>
+    
+</body>
+</html>
