@@ -1,6 +1,7 @@
 # HCCS (HomeClimateControlSystem)
 
-### Contributors: [Denis Davydov](https://github.com/DennisDavydov) & [Vasily Davydov](https://github.com/vas-dav)
+### Made by: [Denis Davydov](https://github.com/DennisDavydov) 
+> With a contribution of [Vasily Davydov](https://github.com/vas-dav)
 
 # Introduction:
 
