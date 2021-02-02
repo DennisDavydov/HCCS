@@ -31,4 +31,4 @@ The project consists of four parts:
 - 4.Server-side php files handling requests.
 	Handled by all the files inside 'includes' folder
 
-> Technically, there is also the step of setting up Raspberry Pi OS and server, but since the use of RaPi is a personal preference and pretty > straightforward anyway I do not include it.
+> Technically, there is also the step of setting up Raspberry Pi OS and server, but since the use of RaPi is a personal preference and pretty  straightforward anyway I do not include it.
